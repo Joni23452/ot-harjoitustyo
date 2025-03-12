@@ -102,3 +102,8 @@ class TestKassapaate(unittest.TestCase):
         maksukortti = Maksukortti(1000)
         self.kassapaate.lataa_rahaa_kortille(maksukortti, 10)
         self.assertEqual(self.kassapaate.kassassa_rahaa_euroina(), 1000.1)
+
+    def test_kortille_negatiivinen_lataus_ei_lataa(self):
+        maksukortti = Maksukortti(1000)
+        self.kassapaate.lataa_rahaa_kortille(maksukortti, -10)
+        self.assertEqual(self.kassapaate.kassassa_rahaa_euroina(), 1000)
