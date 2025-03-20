@@ -5,14 +5,14 @@ class Inventory:
     def get_content(self):
         return self.content
 
-    def add_item(self, item):
-        if item in self.content.keys():
-            self.content[item]+=1
+    def add_item(self, item_key):
+        if item_key in self.content.keys():
+            self.content[item_key]+=1
         else:
-            self.content[item]=1
+            self.content[item_key]=1
     
-    def remove_item(self, item):
-        if self.content[item] == 1:
-            self.content.pop(item)
+    def remove_item(self, item_key):
+        if self.content[item_key] == 1:
+            self.content.pop(item_key)
         else:
-            self.content[item]-=1
+            self.content[item_key]-=1
