@@ -1,10 +1,6 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Keräilypeli
 
-Teen **pelin** jossa voi kerätä *esineitä* ja päivittää niitä satunnaisesti paremmiksi *esineiksi*.  
-
-## Laskarit
-
-[Laskarit](https://github.com/Joni23452/ot-harjoitustyo/tree/main/laskarit)
+Peli jossa voi kerätä tavaroita.
 
 ## Dokumentaatio
 
