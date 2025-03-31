@@ -3,4 +3,5 @@
 | :---: | :---: | ---- |
 | 13.3.2025 | 4 | Määrittelydokumenttia |
 | 21.3.2025 | 2 | Toteutuksen aloitusta |
-| Yht. | 6 | 
+| 30.3.2025 | 3 | Refaktorointia |
+| Yht. | 9 | 
