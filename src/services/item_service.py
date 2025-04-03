@@ -9,7 +9,7 @@ class ItemService:
 
     def get_inventory_content(self):
         return self.inventory.get_content()
-    
+
     def get_item_name(self, item_key):
         item:Item = self.items.get_item_by_key(item_key)
         item_name = item.get_name()

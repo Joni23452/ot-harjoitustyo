@@ -14,6 +14,6 @@ class ItemsDatabase:
     def add_item(self, item: Item):
         self.items[self.next_key] = item
         self.next_key += 1
-    
+
     def get_item_by_key(self, item_key):
         return self.items[item_key]
