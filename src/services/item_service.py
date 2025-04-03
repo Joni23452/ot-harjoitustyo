@@ -17,3 +17,6 @@ class ItemService:
 
     def get_item(self):
         self.inventory.add_item(0)
+    
+    def convert_item(self, item):
+        pass

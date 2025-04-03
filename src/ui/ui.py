@@ -1,20 +1,40 @@
 from services.item_service import ItemService
 
+COMMANDS = {
+    "GET": "get an item",
+    "CONVERT": "convert an item to another"
+}
+
 class Ui:
     def __init__(self):
         self.item_service = ItemService()
 
     def start(self):
+        self._print_commands()
         while True:
-            user_input = self.get_input()
-            if user_input == "GET":
-                self.item_service.get_item()
-            self.print_inventory()
+            command = self._get_input("Command: ")
+            match command:
+                case "GET": self._get_item()
+                case "CONVERT": self._convert()
+                case _: self._print_commands()
+            self._print_inventory()
 
-    def get_input(self):
-        return input("Type GET to get an item: ")
-    
-    def print_inventory(self):
+    def _get_input(self, message: str):
+        return input(message)
+
+    def _get_item(self):
+        self.item_service.get_item()
+
+    def _convert(self):
+        item = self._get_input("Item to convert: ")
+        self.item_service.convert_item(item)
+
+    def _print_commands(self):
+        print("List of commands:")
+        for command in COMMANDS:
+            print(f"{command} - {COMMANDS[command]}")
+
+    def _print_inventory(self):
         inventory_string = ""
         inventory_content = self.item_service.get_inventory_content()
         for item in inventory_content:
