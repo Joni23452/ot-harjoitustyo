@@ -5,6 +5,9 @@ class Inventory:
     def get_content(self):
         return self.content
 
+    def has_item(self, item_key):
+        return item_key in self.content
+
     def add_item(self, item_key):
         if item_key in self.content:
             self.content[item_key]+=1
