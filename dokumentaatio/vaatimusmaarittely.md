@@ -8,15 +8,15 @@ Peli jossa voi kerätä tavaroita ja kerryttää kokoelmaa muuntamalla tavaroita
 
 ### Pelaaja
 
-- Pelaaja näkee luettelon omistamistaan tavaroista.
-- Pelaaja voi kerätä satunnaista tavaraa nappia painamalla.
-- Pelaaja voi muuntaa omistamiansa tavaroita toisiksi tavaroiksi.
+- (Tehty) Pelaaja näkee luettelon omistamistaan tavaroista.
+- (Tehty) Pelaaja voi kerätä satunnaista tavaraa nappia painamalla.
+- (Tehty) Pelaaja voi muuntaa omistamiansa tavaroita toisiksi tavaroiksi.
 
 ### Tavarat
 
-- Tavaroita aluksi vain muutamia erilaisia. Lisää myöhemmin.
-- Tavaroilla on arvo.
-- Tavaran muuntaminen toiseksi perustuu tavaran arvoon.
+- (Tehty) Tavaroita aluksi vain muutamia erilaisia. Lisää myöhemmin.
+- (Tehty) Tavaroilla on arvo.
+- (Tehty) Tavaran muuntaminen toiseksi perustuu tavaran arvoon.
     - Tavarasta tulee satunnaisesti joko arvokkaampi tai arvottomampi tavara.
 
 ### Tietojen tallennus
