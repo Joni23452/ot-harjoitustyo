@@ -6,6 +6,9 @@ class Item:
     def get_name(self):
         return self.name
 
+    def get_value(self):
+        return self.value
+
 class ItemsDatabase:
     def __init__(self):
         self.items = {}
