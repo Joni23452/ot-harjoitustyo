@@ -21,7 +21,8 @@ class ItemService:
         return item_name
 
     def get_item(self):
-        self.inventory.add_item(0)
+        new_item = self.random_service.convert(0)
+        self.inventory.add_item(new_item)
 
     def convert_item(self, item_name):
         item_key = self.items.get_item_key_by_name(item_name)
