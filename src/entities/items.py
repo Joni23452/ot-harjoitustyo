@@ -23,6 +23,8 @@ class ItemsDatabase:
     def get_item_by_key(self, item_key):
         return self.items[item_key]
 
-    def get_item_by_name(self, item_name):
-        key = self.item_name_to_key[item_name]
-        return self.get_item_by_key(key)
+    def get_item_key_by_name(self, item_name):
+        return self.item_name_to_key[item_name]
+
+    def get_keys(self):
+        return self.items.keys()
