@@ -20,7 +20,7 @@ class ItemRepository:
         return item.get_value()
 
     def get_all_item_ids(self) -> list:
-        self.items.get_keys()
+        return list(self.items.get_keys())
 
     def get_item_id_by_name(self, name) -> int:
         return self.items.get_item_key_by_name(name)
