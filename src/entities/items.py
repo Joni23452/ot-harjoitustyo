@@ -9,22 +9,22 @@ class Item:
     def get_value(self):
         return self.value
 
-class ItemsDatabase:
+class ItemDatabase:
     def __init__(self):
         self.items = {}
-        self.item_name_to_key = {}
-        self.next_key = 0
+        self.item_name_to_id = {}
+        self.next_id = 0
 
     def add_item(self, item: Item):
-        self.items[self.next_key] = item
-        self.item_name_to_key[item.get_name()] = self.next_key
-        self.next_key += 1
+        self.items[self.next_id] = item
+        self.item_name_to_id[item.get_name()] = self.next_id
+        self.next_id += 1
 
-    def get_item_by_key(self, item_key):
-        return self.items[item_key]
+    def get_item_by_id(self, item_id: int) -> Item:
+        return self.items[item_id]
 
-    def get_item_key_by_name(self, item_name):
-        return self.item_name_to_key[item_name]
+    def get_item_id_by_name(self, item_name: str) -> int:
+        return self.item_name_to_id[item_name]
 
-    def get_keys(self):
-        return self.items.keys()
+    def get_ids(self) -> list:
+        return list(self.items.keys())
