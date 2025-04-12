@@ -8,11 +8,11 @@ class Inventory:
     def has_item(self, item_id: int) -> bool:
         return item_id in self.content
 
-    def add_item(self, item_id: int):
+    def add_items(self, item_id: int, count: int):
         if item_id in self.content:
-            self.content[item_id]+=1
+            self.content[item_id]+=count
         else:
-            self.content[item_id]=1
+            self.content[item_id]=count
 
     def remove_item(self, item_id: int):
         if self.content[item_id] == 1:
