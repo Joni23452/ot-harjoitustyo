@@ -1,10 +1,10 @@
 from repositories.item_repository import ItemRepository
-from repositories.inventory_repository import InventoryRepository
+from repositories.inventory_repository import default_inventory_repository
 from services.random_service import RandomService
 
 class ItemService:
-    def __init__(self):
-        self.inventory_repository = InventoryRepository()
+    def __init__(self, inventory_repository=default_inventory_repository):
+        self.inventory_repository = inventory_repository
         self.item_repository = ItemRepository()
         self.random_service = RandomService(self.item_repository)
 

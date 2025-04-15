@@ -2,12 +2,9 @@ import json
 import os
 from entities.inventory import Inventory
 
-DIRNAME = os.path.dirname(__file__)
-INVENTORY_FILE_PATH = os.path.join(DIRNAME, "..", "data", "inventory.json")
-
 class InventoryRepository:
-    def __init__(self):
-        self._file_path = INVENTORY_FILE_PATH
+    def __init__(self, file_path):
+        self._file_path = file_path
         self._inventory = Inventory()
         self._load_inventory(self._file_path)
 
@@ -36,3 +33,7 @@ class InventoryRepository:
 
     def get_content(self) -> dict:
         return self._inventory.get_content()
+
+dirname = os.path.dirname(__file__)
+inventory_default_file_path = os.path.join(dirname, "..", "data", "inventory.json")
+default_inventory_repository = InventoryRepository(inventory_default_file_path)
