@@ -18,3 +18,12 @@ class TestItemService(unittest.TestCase):
         items = list(inventory_content.keys())
         self.assertEqual(len(items),1)
         self.assertEqual(inventory_content[items[0]],1)
+
+    def test_successful_convert_returns_a_different_item(self):
+        self.item_service.get_item()
+        items = self.item_service.get_inventory_content()
+        item = list(items.keys())[0]
+        item_name = self.item_service.get_item_name(item)
+        result = self.item_service.convert_item(item_name)
+        self.assertTrue(result[0])
+        self.assertNotEqual(result[1], item_name)
