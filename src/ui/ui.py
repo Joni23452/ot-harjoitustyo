@@ -24,7 +24,10 @@ class Ui:
         return input(message)
 
     def _get_item(self):
-        self.item_service.get_item()
+        item = self.item_service.get_item()
+        item_name = self.item_service.get_item_name(item)
+        item_value = self.item_service.get_item_value(item)
+        print(f"You got {item_name}, value: {item_value}")
 
     def _convert(self):
         item = self._get_input("Item to convert: ")

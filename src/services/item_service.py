@@ -22,6 +22,7 @@ class ItemService:
     def get_item(self):
         new_item = self.random_service.convert(0)
         self.inventory_repository.add_item(new_item)
+        return new_item
 
     def convert_item(self, item_name):
         item_id = self.item_repository.get_item_id_by_name(item_name)
