@@ -24,3 +24,4 @@
 - Pelaajan tavaraluettelo tallennetaan nyt tiedostoon. Tallentamisesta ja tavaraluettelon ylläpitämisestä vastaa InventoryRepository-luokka.
 - Peliin lisätään tavarat nyt tiedostosta. Tiedoston lukemisesta ja tietojen hausta vastaa ItemRepository-luokka.
 - Pelaaja nyt näkee tavaroidensa arvon ja yhteisarvon sekä näkee enemmän tietoja saadessaan ja muuntaessaan tavaraa.
+- Testattu convert-toimintoa
