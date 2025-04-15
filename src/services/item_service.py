@@ -24,10 +24,16 @@ class ItemService:
         self.inventory_repository.add_item(new_item)
         return new_item
 
+    # Returns list containing whether convertation was successful, name of new item and difference in values between old and new item.
     def convert_item(self, item_name):
+        if not self.item_repository.item_with_name_exists(item_name):
+            return [False]
         item_id = self.item_repository.get_item_id_by_name(item_name)
         if self.inventory_repository.has_item(item_id):
             value = self.item_repository.get_item_value(item_id)
             new_item = self.random_service.convert(value)
+            value_difference = self.item_repository.get_item_value(new_item)-value
             self.inventory_repository.remove_item(item_id)
             self.inventory_repository.add_item(new_item)
+            return [True, self.item_repository.get_item_name(new_item), value_difference]
+        return [False]

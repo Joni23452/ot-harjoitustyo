@@ -30,8 +30,12 @@ class Ui:
         print(f"You got {item_name}, value: {item_value}")
 
     def _convert(self):
-        item = self._get_input("Item to convert: ")
-        self.item_service.convert_item(item)
+        item_name = self._get_input("Item to convert: ")
+        result = self.item_service.convert_item(item_name)
+        if result[0]:
+            print(f"Converted {item_name} to {result[1]}. Value gain/loss: {result[2]}")
+        else:
+            print("Converting failed. You may have mistyped the name or you don't have the item.")
 
     def _print_commands(self):
         print("List of commands:")

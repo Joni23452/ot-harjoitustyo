@@ -33,6 +33,9 @@ class ItemRepository:
     def get_all_item_ids(self) -> list:
         return self._item_database.get_ids()
 
+    def item_with_name_exists(self, name) -> bool:
+        return self._item_database.name_exists(name)
+
     def get_item_id_by_name(self, name) -> int:
         return self._item_database.get_item_id_by_name(name)
         

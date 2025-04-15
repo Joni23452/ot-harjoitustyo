@@ -28,3 +28,6 @@ class ItemDatabase:
 
     def get_ids(self) -> list:
         return list(self.items.keys())
+
+    def name_exists(self, name) -> bool:
+        return name in self.item_name_to_id
