@@ -2,6 +2,8 @@
 
 Peli jossa voi kerätä tavaroita.
 
+[Viikko 5 release](https://github.com/Joni23452/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Asennus- ja käyttöohjeet
 
 - Varmista että sinulla on poetry asennettuna komennolla ```poetry --version```. Jos ei ole, seuraa ohjeita [poetryn asentamiseen](https://ohjelmistotekniikka-hy.github.io/python/viikko2#asennus).  
