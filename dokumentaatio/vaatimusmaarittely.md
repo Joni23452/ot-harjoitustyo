@@ -21,7 +21,7 @@ Peli jossa voi kerätä tavaroita ja kerryttää kokoelmaa muuntamalla tavaroita
 
 ### Tietojen tallennus
 
-- Pelaajan tavaraluettelo voidaan tallentaa tiedostoon.
+- (Tehty) Pelaajan tavaraluettelo voidaan tallentaa tiedostoon.
 
 ## Jatkokehitysideoita
 - Tavaroilla on ominaisuuksia joihin niiden muuntaminen voi arvon lisäksi perustua.
