@@ -1,6 +1,6 @@
 # Keräilypeli
 
-Peli jossa voi kerätä tavaroita.
+Peli jossa voi kerätä tavaroita ja muuntaa niitä satunnaisesti toisiksi. Tavaroita on tällä hetkellä 20 erilaista, koita kerätä kaikki.
 
 [Viikko 5 release](https://github.com/Joni23452/ot-harjoitustyo/releases/tag/viikko5)
 
