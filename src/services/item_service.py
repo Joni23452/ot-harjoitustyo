@@ -15,6 +15,10 @@ class ItemService:
         item_name = self.item_repository.get_item_name(item_id)
         return item_name
 
+    def get_item_value(self, item_id):
+        item_value = self.item_repository.get_item_value(item_id)
+        return item_value
+
     def get_item(self):
         new_item = self.random_service.convert(0)
         self.inventory_repository.add_item(new_item)

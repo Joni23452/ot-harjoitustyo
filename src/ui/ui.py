@@ -2,7 +2,8 @@ from services.item_service import ItemService
 
 COMMANDS = {
     "GET": "get an item",
-    "CONVERT": "convert an item to another"
+    "CONVERT": "convert an item to another",
+    "LIST": "lists all the items you own and their values"
 }
 
 class Ui:
@@ -16,8 +17,8 @@ class Ui:
             match command:
                 case "GET": self._get_item()
                 case "CONVERT": self._convert()
+                case "LIST": self._print_inventory()
                 case _: self._print_commands()
-            self._print_inventory()
 
     def _get_input(self, message: str):
         return input(message)
@@ -37,8 +38,12 @@ class Ui:
     def _print_inventory(self):
         inventory_string = ""
         inventory_content = self.item_service.get_inventory_content()
+        total_value = 0
         for item in inventory_content:
             item_name = self.item_service.get_item_name(item)
+            item_value = self.item_service.get_item_value(item)
             item_count = inventory_content[item]
-            inventory_string+=(f"{item_name}: {item_count}\n")
+            total_value += item_count*item_value
+            inventory_string += f"{item_count} {item_name} (Value: {item_value}) \n"
+        inventory_string += f"Total value: {total_value}"
         print(inventory_string)
