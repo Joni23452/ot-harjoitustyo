@@ -1,6 +1,6 @@
-from entities.items import Item, ItemDatabase
 import json
 import os
+from entities.items import Item, ItemDatabase
 
 DIRNAME = os.path.dirname(__file__)
 ITEMS_FILE_PATH = os.path.join(DIRNAME, "..", "data", "items.json")
@@ -11,7 +11,7 @@ class ItemRepository:
         self._load_items(ITEMS_FILE_PATH)
 
     def _load_items(self, file_path):
-        with open(file_path) as file:
+        with open(file_path, encoding="utf-8") as file:
             items: list = json.load(file)["items"]
         for item_data in items:
             name: str = item_data["name"]
@@ -38,6 +38,6 @@ class ItemRepository:
 
     def get_item_id_by_name(self, name) -> int:
         return self._item_database.get_item_id_by_name(name)
-        
+
     def _get_item(self, item_id: int) -> Item:
         return self._item_database.get_item_by_id(item_id)

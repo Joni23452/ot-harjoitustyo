@@ -24,7 +24,6 @@ class ItemService:
         self.inventory_repository.add_item(new_item)
         return new_item
 
-    # Returns list containing whether convertation was successful, name of new item and difference in values between old and new item.
     def convert_item(self, item_name):
         if not self.item_repository.item_with_name_exists(item_name):
             return [False]
