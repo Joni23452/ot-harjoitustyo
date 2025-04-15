@@ -1,18 +1,25 @@
-[
-    {
-        "name": "kala",
-        "value": 1
-    },
-    {
-        "name": "ötökkä",
-        "value": 2
-    },
-    {
-        "name": "kivi",
-        "value": 10
-    },
-    {
-        "name": "talo",
-        "value": 100
-    }
-]
+{
+    "_comment": "Tämän tiedoston sisältö on generoitu ChatGPT:llä.",
+    "items": [
+        { "name": "Dust", "value": 1 },
+        { "name": "Banana", "value": 5 },
+        { "name": "Sock", "value": 10 },
+        { "name": "Mug", "value": 15 },
+        { "name": "Chair", "value": 20 },
+        { "name": "Fish", "value": 25 },
+        { "name": "Fan", "value": 30 },
+        { "name": "Rug", "value": 35 },
+        { "name": "Radio", "value": 40 },
+        { "name": "Couch", "value": 45 },
+        { "name": "Watch", "value": 50 },
+        { "name": "Bike", "value": 55 },
+        { "name": "Camera", "value": 60 },
+        { "name": "Laptop", "value": 65 },
+        { "name": "Ring", "value": 70 },
+        { "name": "Fossil", "value": 75 },
+        { "name": "Car", "value": 80 },
+        { "name": "Crown", "value": 85 },
+        { "name": "Rocket", "value": 95 },
+        { "name": "Lightsaber", "value": 100 }
+    ]
+}

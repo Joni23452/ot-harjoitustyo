@@ -12,7 +12,7 @@ class ItemRepository:
 
     def _load_items(self, file_path):
         with open(file_path) as file:
-            items: list = json.load(file)
+            items: list = json.load(file)["items"]
         for item_data in items:
             name: str = item_data["name"]
             value: int = item_data["value"]
