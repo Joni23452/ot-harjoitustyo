@@ -1,23 +1,28 @@
-# Alustava luokkakaavio
+# Luokkakaavio
 ```mermaid
  classDiagram
-    ItemService "1" -- "1" ItemsDatabase
-    ItemService "1" -- "1" Inventory
-    ItemsDatabase "1" -- "*" Item
+    ItemService "1" -- "1" ItemRepository
+    ItemService "1" -- "1" InventoryRepository
+    ItemRepository "1" -- "1" ItemDatabase
+    ItemDatabase "1" -- "*" Item
     ItemService "1" -- "1" RandomService
-    RandomService "1" -- "1" ItemsDatabase
+    RandomService "1" .. "1" ItemRepository
     class Item{
         name
         value
     }
-    class ItemsDatabase{
+    class ItemRepository{
+        get_item_name(item_id)
+        get_item_value(item_id)
     }
     class RandomService{
-        convert()
+        convert(value)
     }
-    class Inventory{
-        add_item()
-        remove_item()
+    class InventoryRepository{
+        add_item(item_id)
+        remove_item(item_id)
+        get_content()
+        has_item(item_id)
     }
 ```
 
