@@ -20,10 +20,27 @@ class TestItemService(unittest.TestCase):
         self.assertEqual(inventory_content[items[0]],1)
 
     def test_successful_convert_returns_a_different_item(self):
+        item_id = self.item_service.get_item() 
+        item_name = self.item_service.get_item_name(item_id)
+        convert_result = self.item_service.convert_item(item_name)
+        success = convert_result[0]
+        self.assertTrue(success)
+        new_item_name = convert_result[1]
+        self.assertNotEqual(item_name, new_item_name)
+    
+    def test_successful_convert_changes_inventory_content(self):
+        item_id = self.item_service.get_item() 
+        item_name = self.item_service.get_item_name(item_id)
+        inventory_before_convert = self.item_service.get_inventory_content().copy()
+        convert_result = self.item_service.convert_item(item_name)
+        self.assertTrue(convert_result[0])
+        inventory_after_convert = self.item_service.get_inventory_content().copy()
+        self.assertNotEqual(inventory_before_convert, inventory_after_convert)
+
+    def test_failed_convert_does_not_change_inventory_content(self):
         self.item_service.get_item()
-        items = self.item_service.get_inventory_content()
-        item = list(items.keys())[0]
-        item_name = self.item_service.get_item_name(item)
-        result = self.item_service.convert_item(item_name)
-        self.assertTrue(result[0])
-        self.assertNotEqual(result[1], item_name)
+        inventory_before_convert = self.item_service.get_inventory_content().copy()
+        convert_result = self.item_service.convert_item("_not_real_item")
+        self.assertFalse(convert_result[0])
+        inventory_after_convert =self.item_service.get_inventory_content().copy()
+        self.assertEqual(inventory_before_convert, inventory_after_convert)
