@@ -20,7 +20,7 @@ class ItemService:
         return item_value
 
     def get_item(self):
-        new_item = self.random_service.convert(0)
+        new_item = self.random_service.get_random_item()
         self.inventory_repository.add_item(new_item)
         return new_item
 
@@ -30,7 +30,7 @@ class ItemService:
         item_id = self.item_repository.get_item_id_by_name(item_name)
         if self.inventory_repository.has_item(item_id):
             value = self.item_repository.get_item_value(item_id)
-            new_item = self.random_service.convert(value)
+            new_item = self.random_service.convert_value(value)
             value_difference = self.item_repository.get_item_value(new_item)-value
             self.inventory_repository.remove_item(item_id)
             self.inventory_repository.add_item(new_item)

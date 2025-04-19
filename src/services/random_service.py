@@ -13,7 +13,11 @@ class RandomService:
             value = item_repository.get_item_value(item_id)
             self.values.append(value)
 
-    def convert(self, value):
+    def get_random_item(self):
+        # Converting -1 value so raising to power has effect on value 1 items.
+        return self.convert_value(-1)
+
+    def convert_value(self, value):
         weights = self._form_weights(value)
         return random.choices(self.item_ids, weights)[0]
 
