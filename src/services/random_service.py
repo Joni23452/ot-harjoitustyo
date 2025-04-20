@@ -2,8 +2,8 @@ import random
 from repositories.item_repository import ItemRepository
 
 EXPONENT = 2
-'''Higher exponent makes convert even less likely to return items with large value difference.
-Exponent 1 adds no exponent effect.'''
+# Higher exponent makes convert even less likely to return items with large value difference.
+# Exponent 1 adds no exponent effect.
 
 class RandomService:
     def __init__(self, item_repository: ItemRepository):
@@ -21,8 +21,8 @@ class RandomService:
         weights = self._form_weights(value)
         return random.choices(self.item_ids, weights)[0]
 
-    '''Items with a greater value difference to the converting value are given smaller weights 
-    than items with a smaller value difference.'''
+    # Items with a greater value difference to the converting value are given smaller weights
+    # than items with a smaller value difference.
     def _form_weights(self, value):
         relative_values = self._relative_values(value)
         raised_relative_values = raise_to_power(relative_values, EXPONENT)

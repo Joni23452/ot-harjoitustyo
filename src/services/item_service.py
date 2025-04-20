@@ -10,7 +10,7 @@ class ItemService:
 
     def get_inventory_content(self):
         return self.inventory_repository.get_content()
-    
+
     def get_all_items(self):
         return self.item_repository.get_all_item_ids()
 
