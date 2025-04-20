@@ -6,22 +6,29 @@ class InventoryRepository:
     def __init__(self, file_path):
         self._file_path = file_path
         self._inventory = Inventory()
-        self._load_inventory(self._file_path)
+        self._seen_items = []
+        self._load_data(self._file_path)
 
-    def _load_inventory(self, file_path):
+    def _load_data(self, file_path):
         with open(file_path, encoding="utf-8") as file:
-            inventory: dict = json.load(file)
-        for item_id in inventory:
-            count: int = inventory[item_id]
+            data: dict = json.load(file)
+        self._seen_items = data["seen_items"]
+        inventory_content = data["inventory_content"]
+        for item_id in inventory_content:
+            count: int = inventory_content[item_id]
             self._inventory.add_items(int(item_id), count)
 
     def _write_to_file(self, file_path):
-        content = self.get_content()
+        content = {}
+        content["inventory_content"] = self.get_content()
+        content["seen_items"] = self._seen_items
         with open(file_path, "w", encoding="utf-8") as file:
             json.dump(content, file, indent=4)
 
     def add_item(self, item_id: int):
         self._inventory.add_items(item_id, 1)
+        if item_id not in self._seen_items:
+            self._seen_items.append(item_id)
         self._write_to_file(self._file_path)
 
     def remove_item(self, item_id: int):
