@@ -8,7 +8,8 @@ class TestItemService(unittest.TestCase):
         dirname = os.path.dirname(__file__)
         test_inventory_file_path = os.path.join(dirname, "..", "..", "data", "test_inventory.json")
         with open(test_inventory_file_path, "w") as file:
-            file.write("{}")
+            default_content = '{"inventory_content": {},"seen_items": []}'
+            file.write(default_content)
         test_inventory_repository = InventoryRepository(test_inventory_file_path)
         self.item_service = ItemService(test_inventory_repository)
         
