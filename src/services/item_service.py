@@ -10,6 +10,9 @@ class ItemService:
 
     def get_inventory_content(self):
         return self.inventory_repository.get_content()
+    
+    def get_all_items(self):
+        return self.item_repository.get_all_item_ids()
 
     def get_item_name(self, item_id):
         item_name = self.item_repository.get_item_name(item_id)
@@ -36,3 +39,6 @@ class ItemService:
             self.inventory_repository.add_item(new_item)
             return [True, self.item_repository.get_item_name(new_item), value_difference]
         return [False]
+
+    def seen_item(self, item_id):
+        return self.inventory_repository.seen_item(item_id)

@@ -3,7 +3,8 @@ from services.item_service import ItemService
 COMMANDS = {
     "GET": "get an item",
     "CONVERT": "convert an item to another",
-    "LIST": "lists all the items you own and their values"
+    "LIST": "lists all the items you own and their values",
+    "ITEMS": "lists which and how many items you have found"
 }
 
 class Ui:
@@ -18,6 +19,7 @@ class Ui:
                 case "GET": self._get_item()
                 case "CONVERT": self._convert()
                 case "LIST": self._print_inventory()
+                case "ITEMS": self._print_found_items()
                 case _: self._print_commands()
 
     def _get_input(self, message: str):
@@ -54,3 +56,18 @@ class Ui:
             inventory_string += f"{item_count} {item_name} (Value: {item_value}) \n"
         inventory_string += f"Total value: {total_value}"
         print(inventory_string)
+
+    def _print_found_items(self):
+        items_string = ""
+        items = self.item_service.get_all_items()
+        total_items = len(items)
+        seen_items = 0
+        for item in items:
+            if self.item_service.seen_item(item):
+                seen_items += 1
+                item_name = self.item_service.get_item_name(item)
+                items_string += f"{item_name}\n"
+            else:
+                items_string += f"???\n"
+        items_string += f"You have found {seen_items}/{total_items} items"
+        print(items_string)

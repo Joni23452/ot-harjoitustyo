@@ -41,6 +41,9 @@ class InventoryRepository:
     def get_content(self) -> dict:
         return self._inventory.get_content()
 
+    def seen_item(self, item_id: int) -> bool:
+        return item_id in self._seen_items
+
 dirname = os.path.dirname(__file__)
 inventory_default_file_path = os.path.join(dirname, "..", "data", "inventory.json")
 default_inventory_repository = InventoryRepository(inventory_default_file_path)
