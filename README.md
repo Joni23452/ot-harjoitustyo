@@ -2,6 +2,9 @@
 
 Peli jossa voi kerätä tavaroita ja muuntaa niitä satunnaisesti toisiksi. Tavaroita on tällä hetkellä 20 erilaista, koita kerätä kaikki.
 
+## Releaset
+
+[Viikko 6 release](https://github.com/Joni23452/ot-harjoitustyo/releases/tag/viikko6)  
 [Viikko 5 release](https://github.com/Joni23452/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Asennus- ja käyttöohjeet
