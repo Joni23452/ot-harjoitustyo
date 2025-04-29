@@ -31,3 +31,4 @@ Peli jossa voi kerätä tavaroita ja kerryttää kokoelmaa muuntamalla tavaroita
 - Tavaran muuntamisesta voi saada takaisin useita tavaroita.
 - Tavaran keräämisestä ja/tai muuntamisesta saa pisteitä joilla voi ostaa arvokkaita tavaroita.
 - Tavaraluettelon sijaan pelaajan tavarat voisi piirtää fysiikkasimulaationa jonkin kirjaston avulla.
+- (Tehty) Pelaaja näkee listan löytämistään erilaisista esineistä ja montako vielä on löydettävissä.
