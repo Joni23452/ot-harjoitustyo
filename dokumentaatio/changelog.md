@@ -25,3 +25,9 @@
 - Peliin lisätään tavarat nyt tiedostosta. Tiedoston lukemisesta ja tietojen hausta vastaa ItemRepository-luokka.
 - Pelaaja nyt näkee tavaroidensa arvon ja yhteisarvon sekä näkee enemmän tietoja saadessaan ja muuntaessaan tavaraa.
 - Testattu convert-toimintoa
+
+## Viikko 6
+
+- Muutettu CONVERT komentoa niin että suuren arvoeron tavara on nyt entistä harvinaisempaa saada.
+- Lisätty ITEMS-komento jolla pelaaja näkee kohtaamansa tavarat sekä montako pelin tavaroista on löydetty.
+- Testattu että muuntaminen onnistuneena muuttaa pelaajan tavaraluettelon sisältöä ja epäonnistuneena tavaraluettelo pysyy entisellään.
