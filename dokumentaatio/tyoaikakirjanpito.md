@@ -8,4 +8,5 @@
 | 8.4.2025 | 4 | Toiminnallisuutta, tavaroiden muuntaminen |
 | 11.-12.4.2025 | 4 | Tiedostojen käyttöä |
 | 19.-20.4.2025 | 4 | Muuntamislogiikan kehitystä, uusi ITEMS komento |
-| Yht. | 22 | 
+| 8.5.2025 | 3 | Graafisen käyttöliittymän luomista. Jätetty keskeneräiseksi. |
+| Yht. | 25 | 
