@@ -2,33 +2,24 @@
 
 ## Sovelluksen tarkoitus
 
-Peli jossa voi kerätä tavaroita ja kerryttää kokoelmaa muuntamalla tavaroita toisiksi. 
+Peli jossa voi kerätä tavaroita ja kerryttää kokoelmaa myöskin muuntamalla tavaroita toisiksi. 
 
-## Suunnitellut toiminnallisuudet perusversiossa
+## Toiminnallisuudet
 
 ### Pelaaja
 
-- (Tehty) Pelaaja näkee luettelon omistamistaan tavaroista.
-- (Tehty) Pelaaja voi kerätä satunnaista tavaraa nappia painamalla.
-- (Tehty) Pelaaja voi muuntaa omistamiansa tavaroita toisiksi tavaroiksi.
+- Pelaaja voi kerätä satunnaisen tavaran syöttämällä komennon.
+- Pelaaja voi muuntaa omistamiansa tavaroita toisiksi tavaroiksi.
+- Pelaaja voi nähdä luettelon omistamistaan tavaroista.
+- Pelaaja voi nähdä edistymisensä pelissä eli montako erilaista tavaraa on löydetty ja monta on vielä löytämättä.
+
 
 ### Tavarat
 
-- (Tehty) Tavaroita aluksi vain muutamia erilaisia. Lisää myöhemmin.
-- (Tehty) Tavaroilla on arvo.
-- (Tehty) Tavaran muuntaminen toiseksi perustuu tavaran arvoon.
-    - Tavarasta tulee satunnaisesti joko arvokkaampi tai arvottomampi tavara.
+- Pelissä on 20 erilaista eriarvoista tavaraa.
+- Tavaran muuntaminen toiseksi perustuu tavaran arvoon.
+    - Tavarasta tulee toinen, todennäköisesti noin samanarvoinen tavara.
 
 ### Tietojen tallennus
 
-- (Tehty) Pelaajan tavaraluettelo voidaan tallentaa tiedostoon.
-
-## Jatkokehitysideoita
-- Tavaroilla on ominaisuuksia joihin niiden muuntaminen voi arvon lisäksi perustua.
-    - Esimerkiksi puusta tehdystä tavarasta saa todennäköisesti takaisin toisen puusta tehdyn tavaran.
-- Pelaaja voi muuntaa kerralla useita tavaroita.
-    - Tällöin muuntaminen perustuu tavaroiden yhteisarvoon.
-- Tavaran muuntamisesta voi saada takaisin useita tavaroita.
-- Tavaran keräämisestä ja/tai muuntamisesta saa pisteitä joilla voi ostaa arvokkaita tavaroita.
-- Tavaraluettelon sijaan pelaajan tavarat voisi piirtää fysiikkasimulaationa jonkin kirjaston avulla.
-- (Tehty) Pelaaja näkee listan löytämistään erilaisista esineistä ja montako vielä on löydettävissä.
+- Pelaajan tavaraluettelo ja edistys tallennetaan pysyvästi jokaisen tavaraluettelon muutoksen yhteydessä.
