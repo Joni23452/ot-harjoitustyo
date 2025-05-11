@@ -1,3 +1,4 @@
+from ui.pygame_interface import PygameInterface
 from services.item_service import ItemService
 
 COMMANDS = {
@@ -10,8 +11,16 @@ COMMANDS = {
 class Ui:
     def __init__(self):
         self.item_service = ItemService()
+        self.interface = PygameInterface()
 
     def start(self):
+        self.interface.open_window((1280, 720))
+        while True:
+            inventory_content = self._get_inventory()
+            self.interface.draw_inventory(inventory_content)
+
+        
+    def startt(self):
         self._print_commands()
         while True:
             command = self._get_input("Command: ")
@@ -44,18 +53,17 @@ class Ui:
         for command in COMMANDS:
             print(f"{command} - {COMMANDS[command]}")
 
-    def _print_inventory(self):
-        inventory_string = ""
+    def _get_inventory(self):
         inventory_content = self.item_service.get_inventory_content()
-        total_value = 0
+        inventory_content_with_data = {}
         for item in inventory_content:
             item_name = self.item_service.get_item_name(item)
             item_value = self.item_service.get_item_value(item)
+            item_data = [item_name, item_value]
             item_count = inventory_content[item]
             total_value += item_count*item_value
-            inventory_string += f"{item_count} {item_name} (Value: {item_value}) \n"
-        inventory_string += f"Total value: {total_value}"
-        print(inventory_string)
+            inventory_content_with_data[item] = [item_count, item_data]
+        return inventory_content_with_data
 
     def _print_found_items(self):
         items_string = ""
