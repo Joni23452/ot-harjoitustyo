@@ -25,5 +25,5 @@ Peli jossa voi kerätä tavaroita ja muuntaa niitä satunnaisesti toisiksi. Tava
 [Työaikakirjanpito](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/tyoaikakirjanpito.md)  
 [Changelog](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)  
 [Arkkitehtuurikuvaus](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)  
-[Käyttöohje](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md) 
+[Käyttöohje](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)  
 [Testausdokumentti](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md) 
