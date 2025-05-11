@@ -20,6 +20,7 @@ Komentoja voit syöttää aina edellisen komennon suoritettua. Komennot toimivat
 ![LIST-komento](./kuvat/LIST.png)  
 - ITEMS-komento kertoo mitä esineitä olet löytänyt.  
 ![ITEMS-komento](./kuvat/ITEMS.png)  
+- QUIT-komento lopettaa ohjelman suorituksen.
 
 ## Muita projektiin liittyviä komentoja
 Suoritettava projektin juurikansiosta kun ohjelmaa ei suoriteta ja riippuvuudet on asennettu.
