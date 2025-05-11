@@ -9,17 +9,17 @@
 ## Ohjelman käyttöohjeet
 
 Sovelluksen käynnistäessä saat listan mahdollisista komennoista joita voit ohjelmalle syöttää.
-![Komennot](/ot-harjoitustyo/dokumentaatio/kuvat/komennot.png)  
+![Komennot](/dokumentaatio/kuvat/komennot.png)  
 
 Komentoja voit syöttää aina edellisen komennon suoritettua. Komennot toimivat seuraavasti:
 - GET-komennolla saat satunnaisen esineen.  
-![GET-komento](/ot-harjoitustyo/dokumentaatio/kuvat/GET.png)  
+![GET-komento](/dokumentaatio/kuvat/GET.png)  
 - CONVERT-komennolla voit muuntaa esineen satunnaisesti toiseksi. Komennon syöttämisen jälkeen syötä esineen nimi joka sinulla on ja jonka haluat muuntaa toiseksi.  
-![CONVERT-komento](/ot-harjoitustyo/dokumentaatio/kuvat/CONVERT.png)
+![CONVERT-komento](/dokumentaatio/kuvat/CONVERT.png)  
 - LIST-komento listaa omistamasi esineet.  
-![LIST-komento](/ot-harjoitustyo/dokumentaatio/kuvat/LIST.png)
+![LIST-komento](/dokumentaatio/kuvat/LIST.png)  
 - ITEMS-komento kertoo mitä esineitä olet löytänyt.  
-![ITEMS-komento](/ot-harjoitustyo/dokumentaatio/kuvat/ITEMS.png)
+![ITEMS-komento](/dokumentaatio/kuvat/ITEMS.png)  
 
 ## Muita projektiin liittyviä komentoja
 Suoritettava projektin juurikansiosta kun ohjelmaa ei suoriteta ja riippuvuudet on asennettu.
