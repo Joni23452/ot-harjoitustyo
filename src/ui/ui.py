@@ -4,7 +4,8 @@ COMMANDS = {
     "GET": "get an item",
     "CONVERT": "convert an item to another",
     "LIST": "lists all the items you own and their values",
-    "ITEMS": "lists which and how many items you have found"
+    "ITEMS": "lists which and how many items you have found",
+    "QUIT": "closes the game"
 }
 
 class Ui:
@@ -20,6 +21,7 @@ class Ui:
                 case "CONVERT": self._convert()
                 case "LIST": self._print_inventory()
                 case "ITEMS": self._print_found_items()
+                case "QUIT": exit()
                 case _: self._print_commands()
 
     def _get_input(self, message: str):
