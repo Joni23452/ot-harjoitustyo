@@ -6,7 +6,14 @@ EXPONENT = 2
 # Exponent 1 adds no exponent effect.
 
 class RandomService:
+    """Luokka jonka tehtävänä on valita satunnaisia esineitä annetun luvun perusteella
+    """
     def __init__(self, item_repository: ItemRepository):
+        """Luokan konstruktori joka alustaa palvelun.
+
+        Args:
+            item_repository (ItemRepository): Tieto pelissä olevista esineistä.
+        """
         self.item_ids = item_repository.get_all_item_ids()
         self.values = []
         for item_id in self.item_ids:
@@ -14,10 +21,23 @@ class RandomService:
             self.values.append(value)
 
     def get_random_item(self):
-        # Converting -1 value so raising to power has effect on value 1 items.
+        """Palauttaa satunnaisen esineen.
+
+        Returns:
+            int: Valittua tavaraa kuvaava luku
+        """
+        # Same as converting -1 value so raising to power has effect on value 1 items.
         return self.convert_value(-1)
 
     def convert_value(self, value):
+        """Valitsee ja palauttaa satunnaisen esineen annetun luvun (tavaran arvon) perusteella.
+
+        Args:
+            value (int): Tavaran arvo tai arvoa kuvaava luku
+
+        Returns:
+            int: valittua tavaraa kuvaava luku
+        """
         weights = self._form_weights(value)
         return random.choices(self.item_ids, weights)[0]
 
