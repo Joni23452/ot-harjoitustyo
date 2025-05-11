@@ -1,6 +1,6 @@
 # Keräilypeli
 
-Peli jossa voi kerätä tavaroita ja muuntaa niitä satunnaisesti toisiksi. Tavaroita on tällä hetkellä 20 erilaista, koita kerätä kaikki.
+Peli jossa voi kerätä tavaroita ja muuntaa niitä satunnaisesti toisiksi. Tavaroita on 20 erilaista, koita kerätä kaikki.
 
 ## Releaset
 
@@ -24,4 +24,6 @@ Peli jossa voi kerätä tavaroita ja muuntaa niitä satunnaisesti toisiksi. Tava
 [Vaatimusmäärittely](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)  
 [Työaikakirjanpito](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/tyoaikakirjanpito.md)  
 [Changelog](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)  
-[Arkkitehtuurikuvaus](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md) 
+[Arkkitehtuurikuvaus](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)  
+[Käyttöohje](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md) 
+[Testausdokumentti](https://github.com/Joni23452/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md) 
