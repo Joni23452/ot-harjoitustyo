@@ -9,17 +9,17 @@
 ## Ohjelman käyttöohjeet
 
 Sovelluksen käynnistäessä saat listan mahdollisista komennoista joita voit ohjelmalle syöttää.
-![Komennot](/dokumentaatio/kuvat/komennot.png)  
+![Komennot](./kuvat/komennot.png)  
 
 Komentoja voit syöttää aina edellisen komennon suoritettua. Komennot toimivat seuraavasti:
 - GET-komennolla saat satunnaisen esineen.  
-![GET-komento](/dokumentaatio/kuvat/GET.png)  
+![GET-komento](./kuvat/GET.png)  
 - CONVERT-komennolla voit muuntaa esineen satunnaisesti toiseksi. Komennon syöttämisen jälkeen syötä esineen nimi joka sinulla on ja jonka haluat muuntaa toiseksi.  
-![CONVERT-komento](/dokumentaatio/kuvat/CONVERT.png)  
+![CONVERT-komento](./kuvat/CONVERT.png)  
 - LIST-komento listaa omistamasi esineet.  
-![LIST-komento](/dokumentaatio/kuvat/LIST.png)  
+![LIST-komento](./kuvat/LIST.png)  
 - ITEMS-komento kertoo mitä esineitä olet löytänyt.  
-![ITEMS-komento](/dokumentaatio/kuvat/ITEMS.png)  
+![ITEMS-komento](./kuvat/ITEMS.png)  
 
 ## Muita projektiin liittyviä komentoja
 Suoritettava projektin juurikansiosta kun ohjelmaa ei suoriteta ja riippuvuudet on asennettu.
