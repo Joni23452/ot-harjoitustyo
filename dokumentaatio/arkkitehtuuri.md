@@ -1,12 +1,22 @@
 # Arkkitehtuurikuvaus
 
 ## Ohjelman rakenne
-Ui-hakemiston käyttöliittymä pyytää tietoa sekä lähettää suorituspyyntöjä Services-hakemiston ItemService-luokalle. Services-hakemiston luokat suorittavat pyyntöihin liittyvän sovelluslogiikan ja lähettävät Repositories-hakemiston luokille pyyntöjä tarvittavista haettavista tiedoista sekä tallennettavista tiedoista. Services-hakemiston luokat sitten palauttavat Ui-hakemiston luokille pyydetyt tiedot päivitykset.
+Ohjelman rakenne koostuu kolmesta tasosta jotka sijaitsevat omissa hakemistoissaan:
+- Käyttöliittymä (ui-hakemisto)
+- Sovelluslogiikka (services-hakemisto)
+- Tietojen tallennus ja haku (repositories-hakemisto)
 
-## Sovelluslogiikasta
-ItemService vastaanottaa pyyntöjä tavaran saamisesta ja muuntamisesta sekä tietojen hakemisesta. Tavaran saamiseen ja muuntamiseen avustaa RandomService ja tietojen hakemiseen Repositories.
+### Käyttöliittymä
+Käyttöliittymä toteuttaa ohjelman käyttöliittymän ja aina tarvittaessa pyytää tietoa sekä lähettää suorituspyyntöjä sovelluslogiikan ItemService-luokalle.  
 
-# Luokkakaavio
+### Sovelluslogiikka
+ItemService-luokka vastaanottaa pyyntöjä sovelluslogiikan suorittamisesta sekä tavaroita ja tavaraluetteloa koskevien tietojen hausta. ItemService kommunikoi muiden sovelluslogiikan luokkien kanssa suorittaakseen pyyntöihin liittyvän sovelluslogiikan ja aina tarvittaessa tietojen hakuun ja tallennukseen lähetetään pyyntöjä repositories-hakemiston luokille. ItemService-luokka lopulta palauttaa käyttöliittymälle käyttöliittymän tarvitsemat pyyntöön liittyvät tiedot.
+
+### Tietojen tallennus ja haku
+Repositories-hakemiston luokat vastaavat suorituksen aikaisesta tietojen tallennuksesta ja hausta sekä päivittävät pysyväistallennuksen tiedostoja. Lisäksi ne ylläpitävät entities-hakemiston olioita jotta tietojen hakuun ei aina tarvitse avata tiedostoja. Vain repositories-hakemiston luokat ovat tietoisia olioiden toteutuksesta. Tavaraluettelossa tavaroihin viitataan niitä kuvaavilla luvuilla ja tavaroista saa tietoa vastaavalla luvulla pyytämällä ItemRepository-luokalta.
+
+# Luokkakaavio ohjelman luokista
+
 ```mermaid
  classDiagram
     ItemService "1" -- "1" ItemRepository
@@ -34,7 +44,7 @@ ItemService vastaanottaa pyyntöjä tavaran saamisesta ja muuntamisesta sekä ti
     }
 ```
 
-# Sekvenssikaavio tavaran muuntamisesta
+# Sekvenssikaavio tavaran muuntamisen toteutuksesta
 ```mermaid
 sequenceDiagram
     actor player
